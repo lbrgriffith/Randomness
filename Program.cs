@@ -11,6 +11,9 @@ namespace Randomness
         {
             for (var counter = 1; counter < 10; counter++)
                 Console.WriteLine($"Random Number: {RandomNumber(counter, counter+10):N0}");
+
+            Console.WriteLine("\nPress <Enter> to exit.");
+            Console.ReadLine();
         }
 
         static int RandomNumber(int min, int max)
