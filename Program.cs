@@ -16,12 +16,22 @@ namespace Randomness
             Console.ReadLine();
         }
 
+        #region Numbers
+
+        /// <summary>
+        /// Generates a random integer number 
+        /// </summary>
+        /// <param name="min">Minimum number</param>
+        /// <param name="max">Maximum number</param>
+        /// <returns>Returns a random integer within the specified range.</returns>
         static int RandomNumber(int min, int max)
         {
             lock (getrandom) // synchronize
             {
                 return getrandom.Next(min, max);
             }
-        }
+        } 
+
+        #endregion
     }
 }
